@@ -1,11 +1,13 @@
 services:
   web:
-    image: ghcr.io/nickpstone/openbot:1.1.3-1
+    image: ghcr.io/nickpstone/openbot:1.1.3-2
     restart: unless-stopped
     stop_grace_period: 30s # lets the embedded PostgreSQL shut down cleanly
     environment:
       TZ: ${TZ}
       OPENBOT_INSTALL_TOKEN: ${APP_PASSWORD} # the sign-in password, shown on the app's page
+      OPENBOT_HOSTS: "${DEVICE_HOSTNAME},${DEVICE_DOMAIN_NAME},${SERVER_IP}" # names OpenBot answers on (IPs always work)
+      OPENBOT_WEB_PORT: "8738" # the port in omarchy-app.yml, where the browser opens it
     volumes:
       - ${APP_DATA_DIR}/config:/config # keys from the setup page and the credential encryption key
       - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql # the embedded database: Bots, settings, audit trail
