@@ -17,7 +17,8 @@ description: >-
 
   On first open, a setup page asks for two keys: a CopilotKit Intelligence project key (free at
   copilotkit.ai; OpenBot keeps conversations and memory there, in CopilotKit's cloud) and an
-  Anthropic or OpenAI API key. The first start then takes about a minute.
+  Anthropic or OpenAI API key. The first start then takes about a minute. After that, sign in
+  with the password shown here.
 
 
   It runs as a single user behind Omarchy Server's sign-in, and all Bots share one built-in
@@ -26,3 +27,4 @@ developer: "CopilotKit"
 website: https://open.bot
 repo: https://github.com/CopilotKit/OpenBot
 submitter: "nickpstone"
+deterministicPassword: true

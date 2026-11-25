@@ -5,6 +5,7 @@ services:
     stop_grace_period: 30s # lets the embedded PostgreSQL shut down cleanly
     environment:
       TZ: ${TZ}
+      OPENBOT_INSTALL_TOKEN: ${APP_PASSWORD} # the sign-in password, shown on the app's page
     volumes:
       - ${APP_DATA_DIR}/config:/config # keys from the setup page and the credential encryption key
       - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql # the embedded database: Bots, settings, audit trail
