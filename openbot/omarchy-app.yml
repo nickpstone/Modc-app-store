@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: openbot
+name: "OpenBot"
+tagline: "AI coworkers with their own browser and files"
+icon: https://cdn.jsdelivr.net/gh/CopilotKit/OpenBot@v1.1.3/desktop/src-tauri/icons/icon.png
+category: ai
+version: "1.1.3-1"
+port: 8738
+web:
+  service: web
+  port: 3001
+description: >-
+  OpenBot is CopilotKit's open-source workspace for AI coworkers ("Bots"). Each Bot has a role,
+  instructions and tools, and can browse the web, work with files, run routines on a schedule and
+  learn from what you teach it. It also includes the OpenDots look under Settings › Skin.
+
+
+  On first open, a setup page asks for two keys: a CopilotKit Intelligence project key (free at
+  copilotkit.ai; OpenBot keeps conversations and memory there, in CopilotKit's cloud) and an
+  Anthropic or OpenAI API key. The first start then takes about a minute.
+
+
+  It runs as a single user behind Omarchy Server's sign-in, and all Bots share one built-in
+  browser. Give the server at least 2 GB of free memory, 4 GB for several Bots at once.
+developer: "CopilotKit"
+website: https://open.bot
+repo: https://github.com/CopilotKit/OpenBot
+submitter: "nickpstone"
