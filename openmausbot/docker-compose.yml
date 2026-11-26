@@ -1,0 +1,12 @@
+services:
+  web:
+    image: ghcr.io/nickpstone/openmausbot:0.1.181-1
+    restart: unless-stopped
+    shm_size: 512m # the bots' Chrome, as in OpenMausBot's own compose file
+    environment:
+      TZ: ${TZ}
+      OMB_APP_PASSWORD: ${APP_PASSWORD} # the sign-in password, shown on the app's page
+      OMB_SERVER_NAME: ${DEVICE_HOSTNAME} # the name the app shows for this server
+      OMB_PUBLIC_URL: http://${SERVER_IP}:8739 # where pairing links for phones and the desktop app point
+    volumes:
+      - ${APP_DATA_DIR}/data:/data # chats, bots, paired devices and engine logins

@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: openmausbot
+name: "OpenMausBot"
+tagline: "A chat app where every contact is an AI agent"
+icon: https://cdn.jsdelivr.net/gh/milind-soni/OpenMausBot@v0.1.181/build/icon-1024.png
+category: ai
+version: "0.1.181-1"
+port: 8739
+web:
+  service: web
+  port: 8790
+description: >-
+  OpenMausBot is an open-source team of AI bots in a messaging app. Each bot is a real agent running Claude Code or
+  Codex, with its own personality, model, browser and connected apps. Chat with them like contacts, watch them work,
+  and approve shell commands and file edits from cards in the chat.
+
+
+  Sign in with the password shown here. Then open Settings › AI › Providers and sign in to Claude (a Claude
+  subscription or an Anthropic API key) or Codex (a ChatGPT login or an OpenAI API key). Both engines are already
+  installed. Connected apps such as Gmail or GitHub need your own Composio key, under Settings › AI › Other services.
+
+
+  It runs as a single person's server: the bots act as you inside the app's container. Bots browse the web with
+  their own Chrome, but can't use this server's screen. Give the server at least 4 GB of free memory.
+developer: "Milind Soni"
+website: https://www.openmausbot.com
+repo: https://github.com/milind-soni/OpenMausBot
+submitter: "nickpstone"
+deterministicPassword: true
